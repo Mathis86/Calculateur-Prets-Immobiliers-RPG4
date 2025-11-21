@@ -1,0 +1,29 @@
+                R HEADER                                                        
+                                        1 28'Calcul de prêt immobilier'         
+                                        3  1'Intérêts totaux...:'               
+                  INTERETTOT    12S 2     +1EDTWRD(' &   &   & 0 ,  ')          
+                                          +1'€'                                 
+                                        4  1'Montant total.....:'               
+                  MONTANTTOT    12S 2     +1EDTWRD(' &   &   & 0 ,  ')          
+                                          +1'€'                                 
+                                        5  1'Intérêts/Montant..:'               
+                  INTMONT        2S       +1EDTCDE(4)                           
+                                          +1'%'                                 
+                R COLONNES                                                      
+                                           1'Mois' SPACEB(2)                    
+                                          +3'Cap. restant dû'                   
+                                          +9'Intérêts'                          
+                                          +4'Remboursement'                     
+                                          +6'Mensualités'                       
+                R DETAIL                                                        
+                  MOIS           3S 0      2SPACEB(1) EDTCDE(4)                 
+                  CAPRESTDU     11S 2     +4EDTWRD('   &   & 0 ,  ')            
+                  INTERETS      10S 2     +4EDTWRD('  &   & 0 ,  ')             
+                  CAPREMB       10S 2     +4EDTWRD('  &   & 0 ,  ')             
+                  MENSUALITE    10S 2     +4EDTWRD('  &   & 0 ,  ')             
+                R EJECT                                                         
+                                          69'A suivre...' SPACEB(1)             
+                                            SKIPA(1)                            
+                R FOOTER                                                        
+                                           1'Fin des données'                   
+                                            SPACEB(1)                           
